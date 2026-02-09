@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深圳一日遊路線地圖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .route-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .route-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .route-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .route-rating {
+            font-size: 20px;
+        }
+        .route-info {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .info-badge {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        .location {
+            background: #fff3cd;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffc107;
+        }
+        .location-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .location-details {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 5px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-route {
+            background: #28a745;
+        }
+        .btn-route:hover {
+            background: #218838;
+        }
+        .highlights {
+            background: #e7f5ff;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #0066cc;
+        }
+        .summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .summary-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .summary-item strong {
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .route-card {
+                padding: 15px;
+            }
+            .route-title {
+                font-size: 18px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ 深圳一日遊路線地圖</h1>
+
+        <!-- 路線1 -->
+        <div class="route-card">
+            <div class="route-header">
+                <div class="route-title">🏆 路線1：深圳灣新地標一日遊</div>
+                <div class="route-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="route-info">
+                <span class="info-badge">💰 ¥200-300/人</span>
+                <span class="info-badge">⏱️ 交通僅8分鐘</span>
+                <span class="info-badge">🚇 深圳灣口岸</span>
+            </div>
+
+            <div class="location">
+                <div class="location-name">📍 起點：深圳灣口岸</div>
+                <div class="location-details">🚇 地鐵13號線深圳灣口岸站</div>
+                <a href="https://uri.amap.com/marker?position=113.945228,22.491829&name=深圳湾口岸" class="btn" target="_blank">📍 高德地圖</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">1️⃣ 深圳灣萬象城二期 + 粉紅大街</div>
+                <div class="location-details">
+                    ⏰ 10:15-12:00 | 🚇 地鐵13號線后海站（2站，4分鐘）<br>
+                    📍 深圳南山區后海
+                </div>
+                <div class="highlights">🌟 全球首間麥麥美術館、粉紅大街、HAY深圳首店</div>
+                <a href="https://uri.amap.com/marker?position=113.936852,22.508123&name=深圳湾万象城" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=113.945228,22.491829&to=113.936852,22.508123&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 路線規劃</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🍽️ 午餐：深圳灣萬象城米芝蓮餐廳</div>
+                <div class="location-details">⏰ 12:15-13:45 | 💰 ¥100-200/人</div>
+            </div>
+
+            <div class="location">
+                <div class="location-name">2️⃣ 深圳灣文化廣場</div>
+                <div class="location-details">
+                    ⏰ 14:00-16:00 | 🚶 從萬象城步行800米（約10分鐘）<br>
+                    📍 深圳南山區科苑南路2516號
+                </div>
+                <div class="highlights">🌟 「巨型耳機」地標建築、免費常設展《Design100》、國際特展</div>
+                <a href="https://uri.amap.com/marker?position=113.947855,22.504328&name=深圳湾文化广场" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=113.936852,22.508123&to=113.947855,22.504328&mode=walk&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚶 步行路線</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">3️⃣ 深圳人才公園</div>
+                <div class="location-details">
+                    ⏰ 16:15-17:00 | 🚶 緊鄰文化廣場<br>
+                    📍 深圳南山區科苑南路
+                </div>
+                <div class="highlights">🌟 海濱綠道、賞海景放鬆</div>
+                <a href="https://uri.amap.com/marker?position=113.946189,22.505467&name=深圳人才公园" class="btn" target="_blank">📍 高德地圖</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🏁 回程：深圳灣口岸</div>
+                <div class="location-details">⏰ 17:15 | 🚇 地鐵13號線（2站，4分鐘）</div>
+                <a href="https://uri.amap.com/navigation?from=113.946189,22.505467&to=113.945228,22.491829&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 返回路線</a>
+            </div>
+
+            <div class="summary">
+                <div class="summary-item"><strong>✅ 特色：</strong>最新鮮、交通最短、山明水秀</div>
+                <div class="summary-item"><strong>💰 預算：</strong>¥200-300/人</div>
+                <div class="summary-item"><strong>⏱️ 交通：</strong>來回僅8分鐘</div>
+            </div>
+        </div>
+
+        <!-- 路線2 -->
+        <div class="route-card">
+            <div class="route-header">
+                <div class="route-title">🥈 路線2：蓮塘新區便捷線</div>
+                <div class="route-rating">⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="route-info">
+                <span class="info-badge">💰 ¥150-250/人</span>
+                <span class="info-badge">⏱️ 交通僅30分鐘</span>
+                <span class="info-badge">🚇 蓮塘口岸</span>
+            </div>
+
+            <div class="location">
+                <div class="location-name">📍 起點：蓮塘口岸</div>
+                <div class="location-details">🚇 地鐵2/8號線蓮塘站</div>
+                <a href="https://uri.amap.com/marker?position=114.158361,22.537678&name=莲塘口岸" class="btn" target="_blank">📍 高德地圖</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">1️⃣ 蓮塘景福安薈鄰</div>
+                <div class="location-details">
+                    ⏰ 10:10-11:30 | 🚶 地鐵蓮塘站A出口步行50米（1分鐘）<br>
+                    📍 羅湖蓮塘街道國威路與畔山路交匯處
+                </div>
+                <div class="highlights">🌟 一出關即達！朋朋潮汕火鍋、悅得閒廣式點心、按摩採耳店</div>
+                <a href="https://uri.amap.com/marker?position=114.159123,22.538456&name=景福安荟邻" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=114.158361,22.537678&to=114.159123,22.538456&mode=walk&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚶 步行路線</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">2️⃣ 蓮塘街市/香蓮街市</div>
+                <div class="location-details">
+                    ⏰ 11:45-12:30 | 🚶 步行數分鐘<br>
+                    📍 蓮塘口岸附近
+                </div>
+                <div class="highlights">🌟 地道市集、燒味蔬菜超平價</div>
+                <a href="https://uri.amap.com/marker?position=114.158789,22.537234&name=香莲街市" class="btn" target="_blank">📍 高德地圖</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🍽️ 午餐：老廣州煲仔飯</div>
+                <div class="location-details">⏰ 12:45-14:00 | 📍 景福安薈鄰內</div>
+            </div>
+
+            <div class="location">
+                <div class="location-name">3️⃣ 益田假日廣場</div>
+                <div class="location-details">
+                    ⏰ 14:15-16:15 | 🚇 地鐵2號線翠竹站（6站，15分鐘）<br>
+                    📍 深圳羅湖區翠竹街道華麗路2038號
+                </div>
+                <div class="highlights">🌟 安藤忠雄設計藝術中心、永輝超市胖東來產品</div>
+                <a href="https://uri.amap.com/marker?position=114.139234,22.570123&name=益田假日广场" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=114.159123,22.538456&to=114.139234,22.570123&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 路線規劃</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">4️⃣ 粵港新天地美食城</div>
+                <div class="location-details">
+                    ⏰ 16:45-17:15 | 🚇 地鐵2號線羅湖站（10分鐘）<br>
+                    📍 深圳羅湖區南湖街道人民南路1002號
+                </div>
+                <div class="highlights">🌟 新桂軒燒味、廣隆蛋撻王、最後掃街買手信</div>
+                <a href="https://uri.amap.com/marker?position=114.113456,22.534567&name=粤港新天地" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=114.139234,22.570123&to=114.113456,22.534567&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 路線規劃</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🏁 回程：蓮塘口岸</div>
+                <div class="location-details">⏰ 17:30 | 🚶 步行約5分鐘</div>
+                <a href="https://uri.amap.com/navigation?from=114.113456,22.534567&to=114.158361,22.537678&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 返回路線</a>
+            </div>
+
+            <div class="summary">
+                <div class="summary-item"><strong>✅ 特色：</strong>一出關50米即達、最貼地方便</div>
+                <div class="summary-item"><strong>💰 預算：</strong>¥150-250/人</div>
+                <div class="summary-item"><strong>⏱️ 交通：</strong>來回僅30分鐘</div>
+            </div>
+        </div>
+
+        <!-- 路線3 -->
+        <div class="route-card">
+            <div class="route-header">
+                <div class="route-title">🥉 路線3：寶安新商場集中遊</div>
+                <div class="route-rating">⭐⭐⭐⭐</div>
+            </div>
+            
+            <div class="route-info">
+                <span class="info-badge">💰 ¥200-300/人</span>
+                <span class="info-badge">⏱️ 交通約2小時</span>
+                <span class="info-badge">🚇 福田口岸</span>
+            </div>
+
+            <div class="location">
+                <div class="location-name">📍 起點：福田口岸</div>
+                <div class="location-details">🚇 地鐵4/10號線福田口岸站</div>
+                <a href="https://uri.amap.com/marker?position=114.057845,22.517678&name=福田口岸" class="btn" target="_blank">📍 高德地圖</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">1️⃣ 深圳懷德萬象匯</div>
+                <div class="location-details">
+                    ⏰ 11:00-13:00 | 🚇 地鐵12號線懷德站（需轉乘，約50-60分鐘）<br>
+                    📍 深圳寶安福永大道33、39號
+                </div>
+                <div class="highlights">🌟 18萬平方米、400+品牌、2025年11月底開幕超新鮮！</div>
+                <a href="https://uri.amap.com/marker?position=113.806234,22.651789&name=怀德万象汇" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=114.057845,22.517678&to=113.806234,22.651789&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 路線規劃</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🍽️ 午餐：懷德萬象匯餐廳</div>
+                <div class="location-details">⏰ 13:15-14:30 | 💰 ¥80-150/人<br>推薦：潮八珍橄欖雞煲、JOETYLER西餐</div>
+            </div>
+
+            <div class="location">
+                <div class="location-name">2️⃣ 寶安大悅城</div>
+                <div class="location-details">
+                    ⏰ 14:45-16:30 | 🚇 地鐵12號線靈芝站（5-6站，15分鐘）<br>
+                    📍 寶安區新安街道中心區25區
+                </div>
+                <div class="highlights">🌟 73萬平方米、陶陶居、海底撈、深圳首家雙巨幕IMAX影院</div>
+                <a href="https://uri.amap.com/marker?position=113.888567,22.565234&name=宝安大悦城" class="btn" target="_blank">📍 高德地圖</a>
+                <a href="https://uri.amap.com/navigation?from=113.806234,22.651789&to=113.888567,22.565234&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 路線規劃</a>
+            </div>
+
+            <div class="location">
+                <div class="location-name">🏁 回程：福田口岸</div>
+                <div class="location-details">⏰ 17:00 | 🚇 地鐵12號線轉乘（約50-60分鐘）</div>
+                <a href="https://uri.amap.com/navigation?from=113.888567,22.565234&to=114.057845,22.517678&mode=bus&policy=0&src=mypage&coordinate=gaode" class="btn btn-route" target="_blank">🚇 返回路線</a>
+            </div>
+
+            <div class="summary">
+                <div class="summary-item"><strong>✅ 特色：</strong>兩大新商場、規模最大</div>
+                <div class="summary-item"><strong>💰 預算：</strong>¥200-300/人</div>
+                <div class="summary-item"><strong>⚠️ 交通：</strong>來回約2小時（較遠）</div>
+            </div>
+        </div>
+
+        <div class="route-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2 style="margin-bottom: 15px;">💡 路線選擇建議</h2>
+            <div style="font-size: 16px; line-height: 1.8;">
+                <p><strong>🏆 最推薦：路線1（深圳灣）</strong><br>交通最短、最新鮮、山明水秀</p>
+                <p><strong>👍 最方便：路線2（蓮塘）</strong><br>一出關即達、掃街買餸最佳</p>
+                <p><strong>🛍️ 最多選擇：路線3（寶安）</strong><br>兩大新商場、但交通較遠</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: white; margin-top: 30px; font-size: 14px;">
+            <p>生成時間：2026-02-09</p>
+            <p>數據來源：高德地圖、百度地圖實際查證</p>
+        </div>
+    </div>
+</body>
+</html>
